@@ -46,9 +46,44 @@ namespace Util{
     }
 }
 
+namespace Original{
+    std::vector<int> CalcScalarMultiple( const std::vector<int>& orig, int scalar ){
+        std::vector<int> res(orig.size());
+        for( int i = 0; i < static_cast<int>(orig.size()); i++ ){
+            res[i] = orig[i] * scalar;
+        }
+    return res;
+    }
+
+    std::vector<int> AddColumnVector( const std::vector<int>& v1, const std::vector<int>& v2 ){
+        std::vector<int> res(v1.size());
+        for( int i = 0; i < static_cast<int>(v1.size()); i++ ){
+            res[i] = v1[i] + v2[i];
+        }
+    return res;
+    }
+}
 
 int main( int argc, char** argv ){
-    
 
+    int n;
+    cin >> n;
+
+    std::vector<int> a(n);
+    for( int i = 0; i < n; i++ ){
+        cin >> a[i];
+    }
+
+    std::vector<int> b(n);
+    for( int i = 0; i < n; i++ ){
+        cin >> b[i];
+    }
+
+    // C = A + 2B
+    std::vector<int> c = Original::AddColumnVector( a, Original::CalcScalarMultiple( b, 2 ) );
+
+    for( int i = 0; i < n; i++ ){
+        cout << c[i] << endl;
+    }
 return 0;
 }
