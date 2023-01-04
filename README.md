@@ -4,8 +4,9 @@ This is a sample so that I can commit this to the GitHub.
 
 ## 1. Question
 
-for文を用いてベクトル和C = A + 2Bを計算し、その結果を文字出力するプログラムを組め。
-ヒント: 一次元配列を用いること。
+for文を用いてベクトル和C = A + 2Bを計算し、その結果を文字出力するプログラムを組め。  
+ヒント: 一次元配列を用いること。  
+ただし、異常系に関しては考慮しないものとする。
 
 ## 2. Conditions
 
